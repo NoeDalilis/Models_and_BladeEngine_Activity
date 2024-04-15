@@ -14,10 +14,14 @@ class BookFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            //
+            'isbn' => $this->faker->isbn13,
+            'title' => $this->faker->sentence,
+            'author' => $this->faker->name,
+            'description' => $this->faker->paragraph,
+            'date_published' => $this->faker->date,
         ];
     }
 }
